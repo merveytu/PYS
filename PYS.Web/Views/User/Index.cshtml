@@ -1,0 +1,23 @@
+﻿@model  List<PYS.Web.Models.User.UserDto>
+<h3>Kullanıcılar (@Model.Count)</h3> 
+<table border="1" cellpadding="5">
+    <thead>
+        <tr> 
+            <th>Adı 2</th>
+            <th>Soyadı</th>
+            <th>Yaşı</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.Age</td>
+                <td>@user.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
